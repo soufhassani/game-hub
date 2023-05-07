@@ -1,17 +1,21 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
-import logo from "../assets/gamehub.webp";
+import { HStack, Image, useColorMode } from "@chakra-ui/react";
+
+import logoWhite from "../assets/gamehub.webp";
+import logoBlack from "../assets/gamehub-black.webp";
+import ColorModeSwitcher from "./ColorModeSwitcher";
 
 const NavBar = () => {
+  const { colorMode } = useColorMode();
   return (
-    <HStack>
+    <HStack justifyContent={"space-between"} padding="10px">
       <Image
-        src={logo}
+        src={colorMode === "dark" ? logoWhite : logoBlack}
         htmlHeight="60px"
         htmlWidth="140px"
         objectFit="contain"
         alt="Game-Gub Logo"
       />
-      <Text>Navbar</Text>
+      <ColorModeSwitcher />
     </HStack>
   );
 };
