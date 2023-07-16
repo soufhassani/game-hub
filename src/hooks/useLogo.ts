@@ -7,6 +7,7 @@ import { useColorMode } from "@chakra-ui/react";
 
 const useLogo = (defaultLogos: string[]) => {
   const { colorMode } = useColorMode();
+  console.log("logos", defaultLogos);
   const blackLogo = defaultLogos.filter((logo) => logo.includes("black"));
   const whiteLogo = defaultLogos.filter((logo) => !logo.includes("black"));
   const theLogo = colorMode === "dark" ? whiteLogo : blackLogo;
