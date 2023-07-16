@@ -1,8 +1,5 @@
 import { HStack, Image } from "@chakra-ui/react";
-import logoWhite from "../assets/gamehub.webp";
-import logoBlack from "../assets/gamehub-black.webp";
-import logoIconBlack from "../assets/logoIcon-black.webp";
-import logoIconWhite from "../assets/logoIcon-white.webp";
+
 import ColorModeSwitcher from "./ColorModeSwitcher";
 import SearchInput from "./SearchInput";
 import useLogo from "../hooks/useLogo";
@@ -12,8 +9,7 @@ interface Props {
 }
 
 const NavBar = ({ onSearch }: Props) => {
-  const logos = [logoBlack, logoIconBlack, logoWhite, logoIconWhite];
-  let { logo, width } = useLogo(logos);
+  let { logo, width } = useLogo();
 
   return (
     <HStack padding="10px">

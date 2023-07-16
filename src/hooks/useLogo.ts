@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
 import { useColorMode } from "@chakra-ui/react";
+import logoWhite from "../assets/gamehub.webp";
+import logoBlack from "../assets/gamehub-black.webp";
+import logoIconBlack from "../assets/logoIcon-black.webp";
+import logoIconWhite from "../assets/logoIcon-white.webp";
 
 // interface Props {
 //   defaultLogos: string[];
 // }
 
-const useLogo = (defaultLogos: string[]) => {
+const useLogo = () => {
   const { colorMode } = useColorMode();
-  console.log("logos", defaultLogos);
-  const blackLogo = defaultLogos.filter((logo) => logo.includes("black"));
-  const whiteLogo = defaultLogos.filter((logo) => !logo.includes("black"));
-  const theLogo = colorMode === "dark" ? whiteLogo : blackLogo;
-  const logo = window.innerWidth < 768 ? theLogo[1] : theLogo[0];
+
+  // const blackLogo = defaultLogos.filter((logo) => logo.includes("black"));
+  // const whiteLogo = defaultLogos.filter((logo) => !logo.includes("black"));
+  const theLogo = colorMode === "dark" ? logoWhite : logoBlack;
+  const theLogoIcon = colorMode === "dark" ? logoIconWhite : logoIconBlack;
+  const logo = window.innerWidth < 768 ? theLogoIcon : theLogo;
   const defaultWidth = window.innerWidth < 768 ? "50px" : "140px";
   const [width, setLogoWidth] = useState(defaultWidth);
   useEffect(() => {

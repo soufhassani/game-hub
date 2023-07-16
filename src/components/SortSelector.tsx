@@ -17,7 +17,6 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   ];
 
   const currentSort = sortOrders.find((item) => item.value === sortOrder);
-  console.log("currentSort", currentSort);
 
   return (
     <Menu>
