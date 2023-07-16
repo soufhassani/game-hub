@@ -7,7 +7,11 @@ import logoIconWhite from "../assets/logoIcon-white.webp";
 import ColorModeSwitcher from "./ColorModeSwitcher";
 import SearchInput from "./SearchInput";
 
-const NavBar = () => {
+interface Props {
+  onSearch: (search: string) => void;
+}
+
+const NavBar = ({ onSearch }: Props) => {
   const { colorMode } = useColorMode();
   const desktopLogo = colorMode === "dark" ? logoWhite : logoBlack;
   const mobileLogo = colorMode === "dark" ? logoIconWhite : logoIconBlack;
@@ -35,7 +39,7 @@ const NavBar = () => {
         objectFit="contain"
         alt="Game-Gub Logo"
       />
-      <SearchInput />
+      <SearchInput onSearch={onSearch} />
       <ColorModeSwitcher />
     </HStack>
   );
