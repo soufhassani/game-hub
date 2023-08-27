@@ -12,7 +12,7 @@ import GenresListSkelaton from "./GenresListSkelaton";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
-  selectedGenre: Genre | null;
+  selectedGenre: number | null;
 }
 
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
@@ -48,7 +48,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
               />
               <Button
                 textAlign="left"
-                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                fontWeight={genre.id === selectedGenre ? "bold" : "normal"}
                 onClick={() => onSelectGenre(genre)}
                 fontSize="lg"
                 variant="links"

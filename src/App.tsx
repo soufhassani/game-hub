@@ -11,8 +11,8 @@ import "./App.css";
 import GameHeading from "./components/GameHeading";
 
 export interface GameQuery {
-  genre: Genre | null;
-  platform: Platform | null;
+  genre: number | null;
+  platform: number | null;
   sortOrder: string;
   searchText: string;
 }
@@ -39,7 +39,9 @@ function App() {
         <GridItem area="aside" paddingX={5}>
           <GenreList
             selectedGenre={gameQuery.genre}
-            onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
+            onSelectGenre={(genre) =>
+              setGameQuery({ ...gameQuery, genre: genre.id })
+            }
           />
         </GridItem>
       </Show>
@@ -49,7 +51,7 @@ function App() {
           <Flex gap={5} marginBottom={5}>
             <PlatformSelector
               onSelectPlatform={(plateform: Platform) =>
-                setGameQuery({ ...gameQuery, platform: plateform })
+                setGameQuery({ ...gameQuery, platform: plateform.id })
               }
               selectedPlatform={gameQuery.platform}
             />
