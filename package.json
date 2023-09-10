@@ -21,7 +21,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-infinite-scroll-component": "^6.1.0"
+    "react-infinite-scroll-component": "^6.1.0",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
     "@types/ms": "^0.7.31",
@@ -33,6 +34,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "simple-zustand-devtools": "^1.1.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
   }

@@ -4,11 +4,7 @@ import ColorModeSwitcher from "./ColorModeSwitcher";
 import SearchInput from "./SearchInput";
 import useLogo from "../hooks/useLogo";
 
-interface Props {
-  onSearch: (search: string) => void;
-}
-
-const NavBar = ({ onSearch }: Props) => {
+const NavBar = () => {
   let { logo, width } = useLogo();
 
   return (
@@ -20,7 +16,7 @@ const NavBar = ({ onSearch }: Props) => {
         objectFit="contain"
         alt="Game-Gub Logo"
       />
-      <SearchInput onSearch={onSearch} />
+      <SearchInput />
       <ColorModeSwitcher />
     </HStack>
   );
