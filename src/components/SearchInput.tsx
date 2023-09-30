@@ -14,7 +14,7 @@ const SearchInput = () => {
     }
   };
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={(e) => handleSubmit(e)} style={{ flex: "1" }}>
       <InputGroup>
         <InputLeftElement children={<BsSearch />} />
         <Input

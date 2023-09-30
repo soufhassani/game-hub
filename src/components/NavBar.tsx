@@ -8,7 +8,7 @@ const NavBar = () => {
   let { logo, width } = useLogo();
 
   return (
-    <HStack padding="10px">
+    <HStack padding="10px" justifyContent="space-between" gap="10px">
       <Image
         src={logo}
         htmlHeight="60px"

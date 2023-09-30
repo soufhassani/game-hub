@@ -6,10 +6,10 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import useGenres from "../hooks/useGenres";
-import getCroppedImageUrl from "../services/image-url";
-import GenresListSkelaton from "./GenresListSkelaton";
-import useGameQuery from "../Store";
+import useGameQuery from "../../Store";
+import GenresListSkelaton from "../GenresListSkelaton";
+import getCroppedImageUrl from "../../services/image-url";
+import useGenres from "../../hooks/useGenres";
 
 const GenreList = () => {
   const genreId = useGameQuery((s) => s.gameQuery.genreId);
