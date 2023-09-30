@@ -11,9 +11,6 @@ import logoIconWhite from "../assets/logoIcon-white.webp";
 
 const useLogo = () => {
   const { colorMode } = useColorMode();
-
-  // const blackLogo = defaultLogos.filter((logo) => logo.includes("black"));
-  // const whiteLogo = defaultLogos.filter((logo) => !logo.includes("black"));
   const theLogo = colorMode === "dark" ? logoWhite : logoBlack;
   const theLogoIcon = colorMode === "dark" ? logoIconWhite : logoIconBlack;
   const logo = window.innerWidth < 768 ? theLogoIcon : theLogo;

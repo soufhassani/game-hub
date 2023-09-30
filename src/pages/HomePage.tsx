@@ -6,7 +6,6 @@ import GameHeading from "../components/game/GameHeading";
 import GenreList from "../components/game/GenreList";
 
 const HomePage = () => {
-  throw new Error("error!!!!");
   return (
     <Grid
       templateAreas={{
