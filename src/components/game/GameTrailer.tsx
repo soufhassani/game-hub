@@ -19,20 +19,24 @@ const GameTrailer = ({ gameId }: Props) => {
   const firstTrailer = data?.results[0];
 
   return firstTrailer ? (
-    <Box position="relative">
+    <Box position="relative" marginBottom={2}>
       <Box
-        maxW={"100px"}
+        maxW={{ base: "70px", md: "100px" }}
         position="absolute"
-        right="10px"
-        top="10px"
+        right={{ base: 0, md: "10px" }}
+        top={{ base: 0, md: "10px" }}
         zIndex="999"
       >
-        <Select onChange={handleChange}>
+        <Select
+          height={"30px"}
+          fontSize={{ base: "xs", md: "md" }}
+          onChange={handleChange}
+        >
           <option value="480">480p</option>
           <option value="max">HD</option>
         </Select>
       </Box>
-      <AspectRatio ratio={16 / 9}>
+      <AspectRatio ratio={{ base: 9 / 7, md: 16 / 9 }}>
         <video
           src={firstTrailer.data[quality]}
           poster={firstTrailer.preview}
