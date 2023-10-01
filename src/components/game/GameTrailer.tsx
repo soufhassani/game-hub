@@ -12,7 +12,6 @@ const GameTrailer = ({ gameId }: Props) => {
 
   if (isLoading) return <Spinner />;
   if (error || !data) throw error;
-  console.log("trailer data: ", data);
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.currentTarget.value;
     if (value === "480" || value === "max") return setQuality(value);
