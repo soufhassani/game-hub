@@ -4,7 +4,7 @@ import { GridItem, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
 import ExpandibleText from "../components/game/ExpandibleText";
 import GameAttributes from "../components/game/GameAttributes";
 import GameTrailer from "../components/game/GameTrailer";
-import GamesScreenshots from "../components/game/gamesScreenshots";
+import GamesScreenshots from "../components/game/GamesScreenshots";
 
 const GameDetails = () => {
   const { slug } = useParams();
@@ -13,10 +13,8 @@ const GameDetails = () => {
   if (isLoading) return <Spinner />;
   if (error || !game) throw error;
 
-  console.log(game);
-
   return (
-    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={2}>
+    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
       <GridItem>
         <Heading>{game.name}</Heading>
         <ExpandibleText>{game.description_raw}</ExpandibleText>

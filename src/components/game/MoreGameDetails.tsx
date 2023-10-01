@@ -1,8 +1,8 @@
-import { Platform } from "../../entities/Platform";
-import { Genre } from "../../entities/Genre";
-import { Publisher } from "../../entities/Publisher";
+import Platform from "../../entities/Platform";
+import Genre from "../../entities/Genre";
+import Publisher from "../../entities/Publisher";
 import CriticScore from "../CriticScore";
-import { Box, Heading, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 interface Props {
   data: Platform[] | Genre[] | Publisher[] | number;
   term: string;

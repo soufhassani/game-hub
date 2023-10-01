@@ -1,4 +1,4 @@
-import { Games } from "../../entities/Games";
+import Games from "../../entities/Games";
 import { SimpleGrid } from "@chakra-ui/react";
 import MoreGameDetails from "./MoreGameDetails";
 interface Props {

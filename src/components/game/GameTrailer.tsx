@@ -10,7 +10,7 @@ const GameTrailer = ({ gameId }: Props) => {
   const [quality, setQuality] = useState<"480" | "max">("480");
   const { data, isLoading, error } = useGameTrailer(gameId);
 
-  if (isLoading) return <Spinner />;
+  if (isLoading) return null;
   if (error || !data) throw error;
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.currentTarget.value;
