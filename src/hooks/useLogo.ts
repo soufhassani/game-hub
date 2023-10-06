@@ -5,10 +5,6 @@ import logoBlack from "../assets/gamehub-black.webp";
 import logoIconBlack from "../assets/logoIcon-black.webp";
 import logoIconWhite from "../assets/logoIcon-white.webp";
 
-// interface Props {
-//   defaultLogos: string[];
-// }
-
 const useLogo = () => {
   const { colorMode } = useColorMode();
   const theLogo = colorMode === "dark" ? logoWhite : logoBlack;
