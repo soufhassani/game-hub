@@ -5,6 +5,11 @@ const ColorModeSwitcher = () => {
   return (
     <HStack>
       <Switch
+        sx={{
+          ".chakra-switch__track, .chakra-switch__track *": {
+            transition: "all .3s ease",
+          },
+        }}
         colorScheme="green"
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
