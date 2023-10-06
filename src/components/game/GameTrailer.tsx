@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Select, Spinner } from "@chakra-ui/react";
+import { AspectRatio, Box, Select } from "@chakra-ui/react";
 import useGameTrailer from "../../hooks/useGameTrailer";
 import { useState } from "react";
 
