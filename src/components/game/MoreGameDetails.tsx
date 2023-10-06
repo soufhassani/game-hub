@@ -9,6 +9,7 @@ interface Props {
 }
 
 const MoreGameDetails = ({ data, term }: Props) => {
+  console.log(data);
   if (typeof data === "number")
     return (
       <Box marginY={5}>
@@ -26,7 +27,7 @@ const MoreGameDetails = ({ data, term }: Props) => {
       <Heading as="dt" fontSize="22px" color="grey">
         {term}
       </Heading>
-      {data.map((d) => (
+      {data?.map((d) => (
         <dd key={d.id}>{d.name}</dd>
       ))}
     </Box>
