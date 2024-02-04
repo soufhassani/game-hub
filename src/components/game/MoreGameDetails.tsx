@@ -9,7 +9,6 @@ interface Props {
 }
 
 const MoreGameDetails = ({ data, term }: Props) => {
-  console.log(data);
   if (typeof data === "number")
     return (
       <Box marginY={5}>

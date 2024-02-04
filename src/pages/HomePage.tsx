@@ -1,13 +1,28 @@
-import { Box, Grid, Show, GridItem, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  Show,
+  GridItem,
+  Flex,
+  BoxProps,
+  GridProps,
+} from "@chakra-ui/react";
 import PlatformSelector from "../components/PlatformSelector";
 import SortSelector from "../components/SortSelector";
 import GameGrid from "../components/game/GameGrid";
 import GameHeading from "../components/game/GameHeading";
 import GenreList from "../components/game/GenreList";
+import { AnimatePresence, motion } from "framer-motion";
+import { useParams } from "react-router-dom";
 
 const HomePage = () => {
+  const MotionGrid = motion<Omit<GridProps, "transition">>(Grid);
   return (
-    <Grid
+    <MotionGrid
+      as={motion.div}
+      initial="initial"
+      animate="animate"
+      exit="exit"
       templateAreas={{
         base: `"main"`,
         lg: `"aside main"`,
@@ -32,7 +47,7 @@ const HomePage = () => {
         </Box>
         <GameGrid />
       </GridItem>
-    </Grid>
+    </MotionGrid>
   );
 };
 
