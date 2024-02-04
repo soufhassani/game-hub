@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Box, Heading, Image, ImageProps } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import TheGame from "../components/game/TheGame";
@@ -14,9 +13,6 @@ const GameDetails = () => {
 
   const image = game.background_image;
   const title = game.title;
-
-  // const [image, setImage] = useState(game.background_image);
-  // const [title, setTitle] = useState(game.title);
 
   const MotionImage = motion<Omit<ImageProps, "transition">>(Image);
 
@@ -65,12 +61,7 @@ const GameDetails = () => {
           </Box>
         )}
 
-        <TheGame
-          slug={slug}
-          isFromHome={fromHome}
-          gameImage={image}
-          gameTitle={title}
-        />
+        <TheGame slug={slug} isFromHome={fromHome} />
       </Box>
     </>
   );

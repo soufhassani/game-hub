@@ -11,18 +11,13 @@ import GameAttributes from "./GameAttributes";
 import GameTrailer from "./GameTrailer";
 import GamesScreenshots from "./GamesScreenshots";
 import useGameDetail from "../../hooks/useGameDetail";
-import { useEffect } from "react";
 
 interface Props {
   slug: string | undefined;
-  gameImage: string | undefined;
-  gameTitle: string | undefined;
-  // setImage: (url: string) => void;
-  // setTitle: (title: string) => void;
   isFromHome: boolean | undefined;
 }
 
-const TheGame = ({ slug, isFromHome, gameImage, gameTitle }: Props) => {
+const TheGame = ({ slug, isFromHome }: Props) => {
   const { data: game, isLoading, error } = useGameDetail(slug!);
 
   if (isLoading) return <Spinner />;

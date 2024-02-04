@@ -1,19 +1,10 @@
-import {
-  Box,
-  Grid,
-  Show,
-  GridItem,
-  Flex,
-  BoxProps,
-  GridProps,
-} from "@chakra-ui/react";
+import { Box, Grid, Show, GridItem, Flex, GridProps } from "@chakra-ui/react";
 import PlatformSelector from "../components/PlatformSelector";
 import SortSelector from "../components/SortSelector";
 import GameGrid from "../components/game/GameGrid";
 import GameHeading from "../components/game/GameHeading";
 import GenreList from "../components/game/GenreList";
-import { AnimatePresence, motion } from "framer-motion";
-import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   const MotionGrid = motion<Omit<GridProps, "transition">>(Grid);
